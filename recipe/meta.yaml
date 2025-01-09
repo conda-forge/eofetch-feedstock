@@ -13,14 +13,14 @@ build:
     - eofetch = eofetch.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - boto3
     - pystac-client
     - requests
@@ -33,6 +33,7 @@ test:
     - eofetch --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/stcorp/eofetch
