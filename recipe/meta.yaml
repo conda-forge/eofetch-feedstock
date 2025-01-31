@@ -1,4 +1,4 @@
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: eofetch
@@ -6,19 +6,20 @@ package:
 
 source:
   url: https://github.com/stcorp/eofetch/archive/{{ version }}.tar.gz
-  sha256: e1723fc3b2a162e4fd5c9a170b0fecc2bfa5c398d6658bee8318fcbaaa717407
+  sha256: 6dfdaa0663e691d782e0e20ef968efd81a3e713741ca2e6a6846a86059d86978
 
 build:
   entry_points:
     - eofetch = eofetch.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - boto3
