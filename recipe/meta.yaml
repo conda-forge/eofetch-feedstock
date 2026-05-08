@@ -1,12 +1,12 @@
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
   name: eofetch
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/stcorp/eofetch/archive/{{ version }}.tar.gz
-  sha256: 6c3a384a04f5cdfe8c103f2cd86a7d9ad6e3f8e9f72eb2ce849ab6ae3110ce9b
+  sha256: 51c8cbcb5c2e09371aebdf8c9d7e5b1b6fdadf073f760c15cec1b8eed35d1fc8
 
 build:
   entry_points:
