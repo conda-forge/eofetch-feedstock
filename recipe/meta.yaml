@@ -2,7 +2,7 @@
 
 package:
   name: eofetch
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/stcorp/eofetch/archive/{{ version }}.tar.gz
